@@ -16,8 +16,6 @@ try:
 except FileNotFoundError:
     long_description = DESCRIPTION
 
-with open('LICENSE') as f:
-    license = f.read()
 
 setup(
     name=NAME,
@@ -28,5 +26,5 @@ setup(
     author='lisp3r',
     author_email='lisp3r@github.com',
     url='github.com/lisp3r/termformat.git',
-    packages=['termformat', 'tests']
+    packages=['termformat', 'termformat/tests']
 )
