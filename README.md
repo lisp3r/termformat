@@ -9,7 +9,8 @@ The package allows you to format terminal output:
 
 Example:
 
-    f = Formatter()
+    from termformat import format_snake
+    f = format_snake.Formatter()
     print(f('Hello World!').bg('#fff').fg('#FAA500').bold().bake())
 
 More details:
