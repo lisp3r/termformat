@@ -20,6 +20,7 @@ def rgb_color(color: str) -> tuple:
 
 class Formatter():
     ESCAPE = '\033'
+    RESET = f'{ESCAPE}[0m'
     BG = '48;2;{r};{g};{b}'
     FG = '38;2;{r};{g};{b}'
 
@@ -75,6 +76,6 @@ class Formatter():
         # self.__raw_text = ''
 
     def bake(self) -> str:
-        result = f'{self.__baking_string}m{self.__raw_text}'
+        result = f'{self.__baking_string}m{self.__raw_text}{self.RESET}'
         self.flush()
         return result
